@@ -1,17 +1,23 @@
+"use client";
 import ButtonDefault from "@/components/Button/ButtonDefault";
+import DefaultLayout from "@/layout/DefaultLayout";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-8 items-center bg-blue-400 w-[480px] h-[250px] p-5 rounded-md">
-      <div className="text-title-md font-semibold text-white">Cat Facts</div>
+    <DefaultLayout title="Cat Facts">
       <div>
         <div className="mb-6">
-          <ButtonDefault size="lg" text="Facts" />
+          <Link href="./cat/fact">
+            <ButtonDefault size="lg" text="Facts" />
+          </Link>
         </div>
         <div>
-          <ButtonDefault size="lg" text="Breeds" />
+          <Link href="./cat/breed">
+            <ButtonDefault size="lg" text="Breeds" />
+          </Link>
         </div>
       </div>
-    </div>
+    </DefaultLayout>
   );
 }
